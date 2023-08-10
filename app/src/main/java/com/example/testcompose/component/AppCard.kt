@@ -14,7 +14,7 @@ import com.example.testcompose.ui.theme.TestComposeTheme
 fun AppCard(
     modifier: Modifier = Modifier,
     containerColor: Color = Color.White,
-    content: @Composable (ColumnScope.() -> Unit),
+    content: @Composable (ColumnScope.() -> Unit)
 ) {
     Card(
         modifier = modifier,
@@ -29,9 +29,9 @@ fun AppCard(
 @Composable
 fun AppCardPreview() {
     TestComposeTheme {
-        AppCard {
+       AppCard {
 
-        }
+       }
     }
     
 }
