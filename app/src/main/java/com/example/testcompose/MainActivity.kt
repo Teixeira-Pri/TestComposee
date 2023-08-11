@@ -17,6 +17,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.testcompose.component.CircularProgressIndicator
+import com.example.testcompose.component.MainScreen
 import com.example.testcompose.ui.theme.Background1
 import com.example.testcompose.ui.theme.TestComposeTheme
 
@@ -26,27 +27,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             TestComposeTheme {
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .background(Color.DarkGray),
-                    contentAlignment = Alignment.Center
-                ) {
-                    CircularProgressIndicator(
-                        modifier = Modifier
-                            .size(250.dp)
-                            .background(Color.DarkGray),
-                        initialValue = 5,
-                        primaryColor = Background1,
-                        secondaryColor = Color.Blue,
-                        circleRadius = 230f,
-                        onPositionChange = { position ->
 
-
-
-                        }
-                    )
-                }
             }
         }
     }
@@ -56,7 +37,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MainActivityPreview() {
     TestComposeTheme {
-        MainActivity()
+
     }
 }
 
