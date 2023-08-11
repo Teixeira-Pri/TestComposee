@@ -28,6 +28,9 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.testcompose.ui.theme.Background1
+import com.example.testcompose.ui.theme.Primary1
+import com.example.testcompose.ui.theme.Primary2
 import kotlin.math.PI
 import kotlin.math.atan2
 import kotlin.math.cos
@@ -121,8 +124,8 @@ fun CircularProgressIndicator(
             drawCircle(
                 brush = Brush.radialGradient(
                     listOf(
-                        primaryColor.copy(0.45f),
-                        secondaryColor.copy(0.15f)
+                        Primary1.copy(0.45f),
+                        Primary2.copy(0.15f)
                     )
                 ),
                 radius = circleRadius,
@@ -133,13 +136,13 @@ fun CircularProgressIndicator(
                 style = Stroke(
                     width = circleThickness
                 ),
-                color = secondaryColor,
+                color = Primary2,
                 radius = circleRadius,
                 center = circleCenter
             )
 
             drawArc(
-                color = primaryColor,
+                color = Primary1,
                 startAngle = 90f,
                 sweepAngle = (360f/maxValue) * positionValue.toFloat(),
                 style = Stroke(
@@ -214,11 +217,11 @@ fun CircularProgressIndicatorPreview() {
     CircularProgressIndicator(
         modifier = Modifier
             .size(250.dp)
-            .background(Color.DarkGray)
+            .background(Background1)
         ,
         initialValue =5,
-        primaryColor = Color.Red,
-        secondaryColor = Color.Blue,
+        primaryColor = Primary1,
+        secondaryColor = Primary2,
         circleRadius = 230f,
         onPositionChange = {
 
